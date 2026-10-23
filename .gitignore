@@ -1,0 +1,24 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Large raw Intel Lab dataset
+data/data.txt
+
+# Ignore Intel Lab derived datasets for now
+data/clean_mote1*.csv
+
+# Keep ESP32 captures tracked
+!data/esp32_readings.csv
+!data/esp32_15min.csv
+!data/esp32_15min_raw.csv
+
+# Generated results
+results/*.csv
+results/*.png
+!results/.gitkeep
+
+# Duplicate nested project copy
+/sensesmart/

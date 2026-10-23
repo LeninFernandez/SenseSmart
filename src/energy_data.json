@@ -1,0 +1,38 @@
+{
+  "placeholder": {
+    "_source_notes": "Rough literature-derived stand-ins for Phase 3's dry run only. sleep_current_ua ~ typical ESP32 deep-sleep datasheet figure; wake_up_uj/sensor_read_uj/tx_uj ~ order-of-magnitude figures consistent with Giordano et al. 2023 (ACM ENSsys) and Hinostroza et al. 2026 (Sensors) — see docs/SenseSmart_Literature_Survey.md. kalman_* and ml_* are rough compute-cost guesses, NOT measured — do not quote these in any results section.",
+    "sleep_current_ua": 10.0,
+    "wake_up_uj": 150.0,
+    "sensor_read_uj": 2000.0,
+    "tx_uj": 8000.0,
+    "deadband_compute_uj": 0.0,
+    "kalman_predict_uj": 5.0,
+    "kalman_update_uj": 5.0,
+    "ml_inference_uj": 20.0,
+    "ml_update_uj": 40.0
+  },
+  "measured": {
+    "_source_notes": "Fill in from Track B Phase 5 — real INA219 measurements. Every value below must be a number (not null) before running with energy_source='measured'.",
+    "sleep_current_ua": null,
+    "wake_up_uj": null,
+    "sensor_read_uj": null,
+    "tx_uj": null,
+    "deadband_compute_uj": null,
+    "kalman_predict_uj": null,
+    "kalman_update_uj": null,
+    "ml_inference_uj": null,
+    "ml_update_uj": null
+  },
+  "estimated": {
+    "_source_notes": "Fallback if the INA219 measurement doesn't come through in time — see Track B's 'Fallback' subsection under Phase 5 (ESP32 datasheet current x on-device-timed duration). Every value below must be a number (not null) before running with energy_source='estimated'.",
+    "sleep_current_ua": null,
+    "wake_up_uj": null,
+    "sensor_read_uj": null,
+    "tx_uj": null,
+    "deadband_compute_uj": null,
+    "kalman_predict_uj": null,
+    "kalman_update_uj": null,
+    "ml_inference_uj": null,
+    "ml_update_uj": null
+  }
+}
